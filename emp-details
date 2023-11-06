@@ -1,0 +1,45 @@
+# by using instance variable 
+class Employee:
+    def __init__(self, name,emp_id, domain, company):
+        self.name = name
+        self.domain = domain
+        self.company = company
+        self.emp_id = emp_id
+employee1 = Employee("Naguru mahammad",'MT-02024', 'python', 'marolix')
+# Accessing variables using instance variables
+print("Employee Name:", employee1.name)
+print("Employee emp_id:", employee1.emp_id)
+print("Employee domain:", employee1.domain)
+print("Employee company:", employee1.company)
+
+
+
+## by using static variable
+class Employee:
+    company = "Marolix"
+    def __init__(self, name, employee_id):
+        self.name = name
+        self.employee_id = employee_id
+
+    def method(self):
+        # Access instance and static variables
+        print(self.name)
+        print(self.employee_id)
+        print(Employee.company)
+
+obj = Employee("dastagiri",'MT-02018')
+obj.method()
+
+
+## by using local variable
+class Employee:
+    def set_details(self, name, employee_id):
+        self.name = name
+        self.employee_id = employee_id
+
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Employee ID: {self.employee_id}")
+employee2 = Employee()
+employee2.set_details("vamsi", 'MT-02022')
+employee2.display()
